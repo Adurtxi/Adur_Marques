@@ -1,0 +1,148 @@
+.section-about {
+    background-color: $color-grey-light-1;
+    padding: 20rem 10rem;
+    margin-top: -20vh;
+    margin-bottom: 20vh;
+
+    &__image {
+        height: 10rem;
+        margin: 0 0.5rem;
+    }
+
+    &__personal_image_box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__personal_image {
+        height: 20rem;
+        border-radius: 50%;
+    }
+
+    &__languages {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.section-pages {
+    background-color: $color-grey-light-1;
+    padding: 20rem 0;
+    margin-top: -25vh;
+
+    @include respond(tab-port) {
+        padding: 10rem 0;
+    }
+
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 1),
+        rgba($color-primary-dark, 1)
+    );
+    background-size: cover;
+    background-position: center;
+    transform: skewY(-4deg);
+
+    & > * {
+        transform: skewY(4deg);
+    }
+}
+
+.section-proyects {
+    background-color: $color-grey-light-1;
+    padding: 20rem 10rem;
+    margin-top: -15vh;
+    margin-bottom: 20vh;
+
+    &__reverse {
+        @include respond(tab-port) {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        [class^="col-"] {
+            &:not(:first-child) {
+                @include respond(tab-port) {
+                    margin-bottom: $gutter-vertical-small;
+                }
+            }
+        }
+    }
+
+    &__image-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__image {
+        opacity: 0;
+        height: 60rem;
+
+        &:hover {
+            transition: 0.3s;
+            transform: scale(1.1);
+        }
+    }
+}
+
+.section-form {
+    margin-top: -20rem;
+
+    padding: 15rem 0;
+    background-image: linear-gradient(
+        to right bottom,
+        $color-primary-light,
+        $color-primary-dark
+    );
+
+    @include respond(tab-port) {
+        padding: 10rem 0;
+    }
+
+    .card {
+        background-image: linear-gradient(
+                105deg,
+                rgba($color-white, 0.93) 0%,
+                rgba($color-white, 0.93) 50%,
+                transparent 50%
+            ),
+            url(../img/background.jpg);
+        background-size: 100%;
+        border-radius: 1rem;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
+
+        @include respond(tab-land) {
+            background-image: linear-gradient(
+                    105deg,
+                    rgba($color-white, 0.93) 0%,
+                    rgba($color-white, 0.93) 65%,
+                    transparent 65%
+                ),
+                url(../img/background.jpg);
+            background-size: cover;
+        }
+
+        @include respond(tab-port) {
+            background-image: linear-gradient(
+                    rgba($color-white, 0.93) 0%,
+                    rgba($color-white, 0.93) 100%
+                ),
+                url(../img/background.jpg);
+        }
+
+        &__form {
+            width: 50%;
+            padding: 6rem;
+
+            @include respond(tab-land) {
+                width: 65%;
+            }
+
+            @include respond(tab-port) {
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,32 @@
+.u-center-text {
+    text-align: center;
+}
+
+.u-margin-bottom-small {
+    margin-bottom: 2rem;
+}
+
+.u-margin-bottom-medium {
+    margin-bottom: 4rem;
+}
+
+.u-margin-bottom-big {
+    margin-bottom: 8rem;
+}
+
+// MOVIMENTS
+.u-move-from-left {
+    opacity: 1 !important;
+
+    animation-name: moveInLeft;
+    animation-duration: .7s;
+    animation-timing-function: ease-out;
+}
+
+.u-move-from-right {
+    opacity: 1 !important;
+
+    animation-name: moveInRight;
+    animation-duration: .7s;
+    animation-timing-function: ease-out;
+}

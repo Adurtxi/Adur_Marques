@@ -1,0 +1,20 @@
+{
+  "name": "adur-marques",
+  "version": "1.0.0",
+  "description": "Landing page for natours",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass assets/sass/main.scss assets/css/style.css -w --output-style compressed",
+    "compress:js": "uglifyjs assets/js/language.js -o assets/js/language.min.js --compress --mangle"
+  },
+  "type": "module",
+  "author": "Adur Marques",
+  "license": "ISC",
+  "devDependencies": {
+    "compress-js": "^2.0.2",
+    "node-sass": "^5.0.0"
+  },
+  "dependencies": {
+    "requirejs": "^2.3.6"
+  }
+}
